@@ -1,7 +1,7 @@
 # LinuxBashScripting
-How to verify the scripting work 
+#How to verify the scripting work 
 # temporarily change the names of the certificate files
-mv /etc/elasticsearch/fullchain.pem /etc/elasticsearch/fullchain-verify.pem
+‘mv /etc/elasticsearch/fullchain.pem /etc/elasticsearch/fullchain-verify.pem’
 mv /etc/elasticsearch/privkey.pem /etc/elasticsearch/privkey-verify.pem
 
 # try to access the Elasticsearch cluster using curl
