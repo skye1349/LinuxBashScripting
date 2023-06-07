@@ -14,5 +14,5 @@ cp $privkey /etc/elasticsearch/privkey.pem
 
 systemctl restart elasticsearch.service 
 
-# Print a message indicating that the filebeat.yml file has been updated
+# Print a message indicating that the certificate copied & elasticsearch restart
 echo "certificate copied & elasticsearch restart"
