@@ -1,4 +1,4 @@
-# LinuxBashScripting
+# Linux Bash Scripting in Elastic Search Stack
 
 This repository contains two Linux bash scripts:
 
