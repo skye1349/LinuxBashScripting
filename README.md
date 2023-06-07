@@ -1,5 +1,6 @@
 # LinuxBashScripting
-#How to verify the scripting work 
+# This is a bash scrpting file to automation the ssl certificate being copied to target path of elastic search.
+# How to verify the scripting work 
 # temporarily change the names of the certificate files
 
 `mv /etc/elasticsearch/fullchain.pem /etc/elasticsearch/fullchain-verify.pem`
