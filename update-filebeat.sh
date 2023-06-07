@@ -1,6 +1,6 @@
 #!/bin/bash
 
-container_id=$(docker ps | grep jobpin-nextjs-prod | awk '{print $1}')
+container_id=$(docker ps | grep cotainer-name | awk '{print $1}')
 
 if [ -z "$container_id" ]; then
   echo "No container with image name jobpin-nextjs-prod is running"
