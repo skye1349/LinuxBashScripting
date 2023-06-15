@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: Skye
 # Date: 15/06/2023
-# Description: This script will delete files older than 90 days
+# Description: This script will list/delete/rm files older than 90 days
 # Modified: 15/06/2023
 
 #list old file
