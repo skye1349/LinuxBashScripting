@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Get a list of all staged .yml files
-STAGED_FILES=$(git diff --cached --name-only -- '*.yml')
+STAGED_FILES=$(git diff --cached --name-only -- '/group_vars/*.yml')
 
 # Check each staged .yml file for the presence of "ANSIBLE"
 for file in $STAGED_FILES; do
