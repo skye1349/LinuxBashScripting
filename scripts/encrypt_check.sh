@@ -1,6 +1,6 @@
 #!/bin/sh
 for file in "$@"; do
-  if grep -q "$ANSIBLE_VAULT;1:1;AES256" "$file"; then
+  if grep -q "\$ANSIBLE_VAULT;1:1;AES256" "$file"; then
     echo "good to go"
   else
     echo "Error: You must encrypt YML first!"
