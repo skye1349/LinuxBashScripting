@@ -1,0 +1,8 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: encrypt-check
+        name: Encrypt check
+        entry: scripts/encrypt_check.sh
+        language: script
+        files: \group_vars/.*$
