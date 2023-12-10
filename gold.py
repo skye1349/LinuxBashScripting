@@ -1,6 +1,8 @@
 import requests
+import os
 from bs4 import BeautifulSoup
-webhook_url = 'https://discord.com/api/webhooks/1183302918380728410/eHWU3xp_duL2pQHQoMtQEzJwKGMh4Yp1v69rkYs9VgOr0MqFeRgkMqPUpSPYttgXbC_B'
+
+webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
 
 
 def get_gold_prices(url):
@@ -35,7 +37,7 @@ def get_gold_prices(url):
         return f"An error occurred: {e}"
 
 # URL of the webpage to scrape
-url = "https://www.melbournegoldcompany.com.au/buy-bullion/5oz-gold-bar-perth-mint-info.php"
+url = os.environ.get('MELBOURNE_GOLD_URL')
 
 # Get the gold prices and related information
 gold_prices_info = get_gold_prices(url)
