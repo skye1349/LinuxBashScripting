@@ -1,11 +1,9 @@
-# trigger: none
-# pr: none
+trigger: none
+pr: none
 
-# pool:
-#   vmImage: 'ubuntu-latest'
+pool:
+  vmImage: 'ubuntu-latest'
 
-# variables: 
-#   - group: PAT
 
 steps:
 - script: echo "Starting Main Pipeline..."
@@ -21,14 +19,18 @@ steps:
     exit 1 # Deliberately fail the step
   displayName: 'failing step'
 
-
-- task: TriggerBuild@3
-  inputs:
-    buildDefinition: 'TriggeredPipeline'
-    authenticationMethod: 'OAuth Token'
-    password: '$(System.AccessToken)'
-    waitForQueuedBuildsToFinish: true
-    waitForQueuedBuildsToFinishRefreshTime: '60'
+- script: |
+    echo "This step is always doing no matter pipeline: canceled, failed, success, timeout"
+  displayName: 'always test'
   condition: always()
+
+# - task: TriggerBuild@3
+#   inputs:
+#     buildDefinition: 'TriggeredPipeline'
+#     authenticationMethod: 'OAuth Token'
+#     password: '$(System.AccessToken)'
+#     waitForQueuedBuildsToFinish: true
+#     waitForQueuedBuildsToFinishRefreshTime: '60'
+#   condition: always()
 
     
