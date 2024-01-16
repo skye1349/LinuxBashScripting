@@ -7,7 +7,7 @@ trigger: none
 
 resources:
   repositories:
-  - repository: skye1349/Scripts
+  - repository: Scripts
     type: git
     name: skye1349/Scripts
     refs: refs/heads/main
