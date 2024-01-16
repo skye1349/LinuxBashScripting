@@ -1,0 +1,17 @@
+name: AppPipeline
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+trigger:
+- main
+
+resources:
+  repositories:
+  - repository: skye1349/Scripts
+    type: git
+    name: skye1349/Scripts
+    refs: refs/heads/main
+
+extends:
+  template: MainPipeline.yaml
