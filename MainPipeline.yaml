@@ -20,9 +20,14 @@ steps:
 
 
 - task: TriggerBuild@3
+  variables: 
+    - group: PAT
   inputs:
     buildDefinition: 'TriggeredPipeline'
+    personalAccessToken: $(PAT)
     waitForQueuedBuildsToFinish: true
     waitForQueuedBuildsToFinishRefreshTime: '60'
   condition: |
     or(failed(), canceled())
+
+    
