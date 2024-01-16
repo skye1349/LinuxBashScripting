@@ -11,7 +11,7 @@ resources:
     type: github
     name: skye1349/Scripts
     refs: refs/heads/main
-    endpoints: apps
+    endpoints: skye1349
 
 extends:
   template: MainPipeline.yaml
