@@ -1,8 +1,8 @@
-trigger: none
-pr: none
+# trigger: none
+# pr: none
 
-pool:
-  vmImage: 'ubuntu-latest'
+# pool:
+#   vmImage: 'ubuntu-latest'
 
 # variables: 
 #   - group: PAT
