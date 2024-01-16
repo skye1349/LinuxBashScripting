@@ -18,8 +18,6 @@ resources:
         include:
         - main
 
-pool:
-  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo "Starting Triggered Pipeline..."
