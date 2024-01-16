@@ -29,7 +29,6 @@ steps:
     password: '$(System.AccessToken)'
     waitForQueuedBuildsToFinish: true
     waitForQueuedBuildsToFinishRefreshTime: '60'
-  condition: |
-    or(failed(), canceled())
+  condition: always()
 
     
