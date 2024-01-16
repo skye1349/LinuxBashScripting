@@ -4,6 +4,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables: 
+  - group: PAT
+
 steps:
 - script: echo "Starting Main Pipeline..."
   displayName: 'Initial Step'
@@ -20,8 +23,6 @@ steps:
 
 
 - task: TriggerBuild@3
-  variables: 
-    - group: PAT
   inputs:
     buildDefinition: 'TriggeredPipeline'
     personalAccessToken: $(PAT)
