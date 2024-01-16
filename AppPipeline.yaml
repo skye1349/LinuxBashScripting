@@ -8,8 +8,8 @@ trigger: none
 resources:
   repositories:
   - repository: Scripts
-    type: git
-    name: Scripts
+    type: github
+    name: skye1349/Scripts
     refs: refs/heads/main
 
 extends:
