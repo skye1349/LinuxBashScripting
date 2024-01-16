@@ -3,8 +3,7 @@ name: AppPipeline
 pool:
   vmImage: 'ubuntu-latest'
 
-trigger:
-- main
+trigger: none
 
 resources:
   repositories:
