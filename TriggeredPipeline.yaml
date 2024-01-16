@@ -11,12 +11,12 @@ resources:
       branches:
         include:
         - main
-  - pipeline: SecondPipelineAlias
-    source: SecondPipelineName
-    trigger: 
-      branches:
-        include:
-        - main
+  # - pipeline: SecondPipelineAlias
+  #   source: SecondPipelineName
+  #   trigger: 
+  #     branches:
+  #       include:
+  #       - main
 
 
 steps:
