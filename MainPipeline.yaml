@@ -4,8 +4,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-variables: 
-  - group: PAT
+# variables: 
+#   - group: PAT
 
 steps:
 - script: echo "Starting Main Pipeline..."
@@ -25,7 +25,8 @@ steps:
 - task: TriggerBuild@3
   inputs:
     buildDefinition: 'TriggeredPipeline'
-    personalAccessToken: $(PAT)
+    authenticationMethod: 'OAuth Token'
+    password: '$(System.AccessToken)'
     waitForQueuedBuildsToFinish: true
     waitForQueuedBuildsToFinishRefreshTime: '60'
   condition: |
