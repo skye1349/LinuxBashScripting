@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Starting Main Pipeline..."
+  displayName: 'Initial Step'
+
+- script: |
+    echo "Simulating a task..."
+    sleep 30  # Sleep for 30 seconds
+  displayName: 'Simulated Task'
+
+- script: |
+    echo "This step will fail..."
+    exit 1 # Deliberately fail the step
+  displayName: 'failing step'
+
+
+- task: TriggerBuild@3
+  inputs:
+    buildDefinition: 'TriggeredPipeline'
+    waitForQueuedBuildsToFinish: true
+    waitForQueuedBuildsToFinishRefreshTime: '60'
+  condition: |
+    or(failed(), canceled())
