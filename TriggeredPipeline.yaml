@@ -3,14 +3,14 @@ trigger: none
 pool:
   vmImage: 'ubuntu-latest'
 
-resources:
-  pipelines:
-  - pipeline: MainPipeline
-    source: MainPipeline
-    trigger: 
-      branches:
-        include:
-        - main
+# resources:
+#   pipelines:
+#   - pipeline: MainPipeline
+#     source: MainPipeline
+#     trigger: 
+#       branches:
+#         include:
+#         - main
   # - pipeline: SecondPipelineAlias
   #   source: SecondPipelineName
   #   trigger: 
